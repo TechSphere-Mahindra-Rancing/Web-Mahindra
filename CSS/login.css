@@ -1,0 +1,110 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+h1 {
+    color: #ff6666; /* vermelho suave */
+    font-size: 2.5rem; /* tamanho aumentado */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #333;
+    background-color: #111;
+    border-radius: 10px;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+button[type="submit"],
+button {
+    background-color: #ff6666;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+}
+
+button[type="submit"]:hover,
+button:hover {
+    background-color: #cc4d4d;
+}
+
+a {
+    color: #ff6666;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.back-link {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #ff6666;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+a.back-link:hover {
+    background-color: #cc4d4d;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #ff6666;
+    text-decoration: none;
+    font-weight: bold;
+}

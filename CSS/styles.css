@@ -1,0 +1,152 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ff6666;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.login-link {
+    background-color: #ff6666;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav ul li a.login-link:hover {
+    background-color: #cc4d4d;
+}
+
+/* Estilos adicionais aqui */
+
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+section {
+    padding: 2rem;
+    border-bottom: 1px solid #333;
+}
+
+#sobre {
+    background-color: #111;
+    text-align: left; /* Alinhamento à esquerda */
+}
+
+#pilotos {
+    background-color: #222;
+    
+}
+
+
+
+#tecnologias {
+    background-color: #333;
+    text-align: center; /* Centraliza as tecnologias */
+}
+
+h1 {
+    color: #ff6666; /* vermelho suave */
+    font-size: 3rem; /* tamanho aumentado */
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: #ff6666; /* vermelho suave */
+    font-size: 2rem; /* tamanho aumentado */
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #ffffff; /* branco */
+    font-size: 1.2rem; /* tamanho aumentado */
+    line-height: 1.5;
+}
+
+.pilotos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.light {
+    width: 100px;
+    height: 100px;
+    background-color: #ff6666;
+    border-radius: 50%;
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px 5px rgba(255, 102, 102, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 50px 10px rgba(255, 102, 102, 0.9);
+    }
+}
+
+
+.piloto, .tecnologia {
+    margin-bottom: 2rem;
+    flex: 1;
+    min-width: 300px; /* ajuste conforme necessário */
+    max-width: 45%; /* para garantir algum espaçamento entre os elementos */
+}
+
+.tecnologia-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.tecnologia i {
+    margin-bottom: 1rem;
+}
+
