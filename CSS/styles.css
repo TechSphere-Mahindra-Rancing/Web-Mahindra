@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-color: #000;
     color: #fff;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Adicionado para rolagem suave */
 }
 
 nav {
@@ -20,29 +20,11 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
-    margin: 0 10px;
-}
-
 nav ul li a {
     color: #ff6666;
     text-decoration: none;
     font-weight: bold;
 }
-
-nav ul li a.login-link {
-    background-color: #ff6666;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-nav ul li a.login-link:hover {
-    background-color: #cc4d4d;
-}
-
-/* Estilos adicionais aqui */
-
 
 .slideshow-container {
     position: relative;

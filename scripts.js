@@ -1,51 +1,61 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scroll for navigation links
-    const navLinks = document.querySelectorAll('#navbar a');
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const targetId = link.getAttribute('href');
-            if (targetId === 'login.html') {
-                window.location.href = targetId;
-            } else {
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    console.error('Target element not found');
-                }
-            }
-        });
+// Toggle mobile menu (only if mobile menu button exists)
+const mobileMenuButton = document.querySelector('#mobile_btn');
+if (mobileMenuButton) {
+    mobileMenuButton.addEventListener('click', function() {
+        const mobileMenu = document.querySelector('#mobile_menu');
+        if (mobileMenu) {
+            mobileMenu.classList.toggle('active');
+        } else {
+            console.error('Mobile menu not found');
+        }
     });
+}
 
-    // Toggle mobile menu (only if mobile menu button exists)
-    const mobileMenuButton = document.querySelector('#mobile_btn');
-    if (mobileMenuButton) {
-        mobileMenuButton.addEventListener('click', function() {
-            const mobileMenu = document.querySelector('#mobile_menu');
-            if (mobileMenu) {
-                mobileMenu.classList.toggle('active');
-            } else {
-                console.error('Mobile menu not found');
-            }
-        });
-    }
-
-    // Login form submission (only if login form exists)
-    const loginForm = document.getElementById('loginForm');
-    if (loginForm) {
-        loginForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            if (username === 'admin' && password === 'admin') {
-                alert('Seu login deu certo!');
+// Login form submission (only if login form exists)
+const loginForm = document.getElementById('loginForm');
+if (loginForm) {
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        
+        if (username === 'admin' && password === 'admin') {
+            Swal.fire({
+                title: 'Sucesso!',
+                text: 'Seu login deu certo!',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then(() => {
                 window.location.href = 'index.html'; // Redireciona para a página inicial
-            } else {
-                alert('Usuário ou senha incorretos. Tente novamente.');
-            }
-        });
+            });
+        } else {
+            Swal.fire({
+                title: 'Erro!',
+                text: 'Usuário ou senha incorretos. Tente novamente.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        }
+    });
+}
+let slideIndex = 0;
+
+function showSlides() {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4000); // Muda o slide a cada 4 segundos
+}
+
+// Chama a função showSlides quando o DOM estiver completamente carregado
+document.addEventListener("DOMContentLoaded", function() {
+    showSlides();
 });
