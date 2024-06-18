@@ -21,24 +21,15 @@ if (loginForm) {
         const password = document.getElementById('password').value;
         
         if (username === 'admin' && password === 'admin') {
-            Swal.fire({
-                title: 'Sucesso!',
-                text: 'Seu login deu certo!',
-                icon: 'success',
-                confirmButtonText: 'OK'
-            }).then(() => {
-                window.location.href = 'index.html'; // Redireciona para a página inicial
-            });
+            alert('Sucesso! Seu login deu certo!');
+            window.location.href = 'index.html'; // Redireciona para a página inicial
         } else {
-            Swal.fire({
-                title: 'Erro!',
-                text: 'Usuário ou senha incorretos. Tente novamente.',
-                icon: 'error',
-                confirmButtonText: 'OK'
-            });
+            alert('Erro! Usuário ou senha incorretos. Tente novamente.');
         }
     });
 }
+
+// Slideshow logic
 let slideIndex = 0;
 
 function showSlides() {
