@@ -27,6 +27,13 @@ nav ul li a {
     font-weight: bold;
 }
 
+nav ul li a:hover {
+    color: #fff; /* Cor ao passar o mouse */
+    background-color: #ff6666; /* Cor de fundo ao passar o mouse */
+    padding: 0.5rem; /* Adicionando padding ao passar o mouse */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
 .slideshow-container {
     position: relative;
     max-width: 100%;
@@ -60,7 +67,7 @@ section {
 }
 
 #sobre {
-    background-color: #111;
+    background-color: #333;
     text-align: left; /* Alinhamento à esquerda */
 }
 
